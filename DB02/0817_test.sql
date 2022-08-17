@@ -11,7 +11,7 @@ SELECT max(height),min(height),max(weight),min(weight) FROM healthcare WHERE hei
 SELECT count(height) FROM healthcare WHERE height >= 160 AND height <= 170;
 
 --5. 음주(is_drinking)를 하는 사람(1)의 허리 둘레(waist)를 높은 순으로 5명 출력하시오. 
-SELECT waist from healthcare WHERE is_drinking = 1 ORDER BY waist DESC LIMIT 5;
+SELECT waist from healthcare WHERE is_drinking = 1 and waist != '' ORDER BY waist DESC LIMIT 5;
 
 --6. 시력 양쪽(va_left, va_right)이 1.5이상이면서 음주(is_drinking)를 하는 사람의 수를 출력하시오.
 SELECT count(is_drinking) from healthcare where va_left >= 1.5 and va_right >= 1.5 and is_drinking = 1;

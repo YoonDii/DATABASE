@@ -93,17 +93,15 @@ count(height)
 ### 5. 음주(is_drinking)를 하는 사람(1)의 허리 둘레(waist)를 높은 순으로 5명 출력하시오. 
 
 ```sql
-SELECT waist from healthcare WHERE is_drinking = 1 ORDER BY waist DESC LIMIT 5;
+SELECT waist from healthcare WHERE is_drinking = 1 and waist != '' ORDER BY waist DESC LIMIT 5;
 ```
 
 ```
-waist
------
-
-
-
-
-모르겠어요ㅠㅠ
+146.0
+142.0
+141.4
+140.0
+140.0
 ```
 
 ### 6. 시력 양쪽(va_left, va_right)이 1.5이상이면서 음주(is_drinking)를 하는 사람의 수를 출력하시오.
