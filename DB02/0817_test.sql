@@ -42,3 +42,6 @@ SELECT count(*) from healthcare where smoking = 1 and is_drinking = 1 and blood_
 
 --15.키 작은 순과 몸무게 큰순으로 5명만 나타내라.
 SELECT height, weight from healthcare ORDER by height ASC, weight DESC LIMIT 5;
+
+--16.몸무게가 많이 나가는 100명 중 흡연(smoking)이 3이거나 음주(is_drinking)를 하는 사람의 나이 평균을 출력하시오.
+select avg(age) from healthcare where smoking = 3 OR is_drinking = 1 order by weight DESC LIMIT 100;
