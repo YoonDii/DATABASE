@@ -135,7 +135,7 @@ sido
 
 성별이 1이면서 흡연이 1인 사람 수
 
-```
+```sqlite
 SELECT COUNT(*) FROM healthcare WHERE gender and smoking = 1 and 1;
 
 COUNT(*)
